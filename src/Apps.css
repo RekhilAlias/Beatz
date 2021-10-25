@@ -1,0 +1,199 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: ghostwhite;
+}
+
+.parent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+
+#round {
+  width: 500px;
+  height: 500px;
+  background-color: black;
+  border-radius: 100%;
+  outline: none;
+  border: none;
+} 
+
+@media(max-width: 700px) {
+  #round {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.animate-left {
+  animation: leftwards 2s ease-in-out;
+  animation-fill-mode: backwards;
+}
+
+@keyframes leftwards {
+  0% {
+    transform: translateX(100%);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+
+
+.animate-right {
+  animation: rightwards 2s ease-in-out;
+  animation-fill-mode: backwards;
+}
+
+@keyframes rightwards {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-up {
+  animation: upward 2s ease-in-out;
+  animation-fill-mode: backwards;
+}
+
+@keyframes upward {
+  0% {
+    transform: translateY(100%);
+  }
+  50% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.animate-down {
+  animation: downward 2s ease-in-out;
+  animation-fill-mode: backwards;
+}
+
+@keyframes downward {
+  0% {
+    transform: translateY(-100%);
+  }
+  50% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.animate-size {
+  animation: size 2s ease-in-out;
+  animation-fill-mode: backwards;
+}
+
+@keyframes size {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.animate-slide {
+  animation: slidein 2s ease-in-out;
+  animation-fill-mode: both;
+}
+
+@keyframes slidein {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(50%);
+  }
+}
+
+.animate-slideout {
+  animation: slideout 2s ease-in-out;
+  animation-fill-mode: both;
+}
+
+@keyframes slideout {
+  from {
+    transform: translateX(50%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+.animate-stretch {
+  animation: stretch 1.5s ease-out 0s alternate infinite none running;
+}
+
+@keyframes stretch {
+  0% {
+    transform: scale(0.3);
+    background-color: red;
+    border-radius: 100%;
+  }
+  50% {
+    background-color: orange;
+  }
+  100% {
+    transform: scale(1.5);
+    background-color: yellow;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 3s ease infinite alternate
+    nudge 5s linear infinite alternate;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    background-color: red;
+  }
+  50% {
+    background-color: orange;
+  }
+}
+
+ @keyframes nudge {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(150px, 0);
+  }
+
+  80% {
+    transform: translate(-150px, 0);
+  }
+}
